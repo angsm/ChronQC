@@ -15,7 +15,7 @@
 		}
 		else{
 			a = {}
-			a.color =barchart_Colors[i] 
+			a.color = barchart_Colors_Mapped[$graphvar_labels[i]] 
 			$graphvar_series[$graphvar_labels[i]]= a
 		}
 	}
@@ -60,7 +60,7 @@
 							if(i==$graphvar_labels.length){text = text + "<br><b>Total Mutations:</b> ".fontcolor("#000000") + data[i] }
 							else {
 								name= $graphvar_labels[i]
-								color = barchart_Colors[i]
+								color = barchart_Colors_Mapped[$graphvar_labels[i]] 
 								text = text +"<br><b>"+ name.fontcolor(color) +":</b> " + data[i]
 							}
 						}
